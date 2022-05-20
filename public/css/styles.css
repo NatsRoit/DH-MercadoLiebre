@@ -1,31 +1,79 @@
 /* 
 Amarillo: #EAC926;
-Azul: #03264C;
+Azul: #023f7f      #03264C;
 Celeste: #1259c3;
 Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a;
-
-
-Familia: 'Roboto'
-
-
-● Tamaños Tipográficos
-Cuerpos de texto: 12px
-Titulares (Basado en tu última visita/Ofertas): 24px Precios: 18px
-Descuentos: 16px
-Descripciones: 16px
-
-● Íconos
- El departamento de diseño usó los íconos de este sitio:
-https://fontawesome.com/icons?d=gallery&m=free
-
 */
 
-header {
+
+body {
+    background-color: #ebebeb;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    line-height: 20px;
+}
+
+header {
     background-color: #EAC926;
+    padding-bottom: 20px;
+}
+
+.nav-bar {
+    padding: 15px 15px 0px;
+}
+
+.nav-bar p {
+    text-align: center;
+}
+
+.login-bar,
+.search-bar {
+    display: none;
+}
+
+#logo {
+    width: 50%;
+}
+
+ul {
+    padding: 0px;
+    line-height: 16px;
+}
+
+.burger-menu {
+    text-align: center;
+    color: #023f7f;
+}
+
+main {
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.producto {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.info-producto{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.fa-truck {
+    color: #39b54a;
+    border: 2px solid #39b54a;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+
+article img {
+    width: 100%;
 }
 
 .titular {
@@ -37,9 +85,64 @@ header {
 }
 
 .descuento {
-    font-size: 16px;
-} 
-
-.descripciones {
-    font-size: 16px;
+    font-size: 14px;
+    color: #39b54a;
 }
+
+.descripcion {
+    font-size: 16px;
+    display: none;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    line-height: 1.2em;
+    color: #666;
+}
+
+.titulo-footer {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+footer i {
+    color: #023f7f;
+    margin-bottom: 10px;
+}
+
+/* Reglas para dispositivos tablet & desktop */
+@media (min-width: 481px) {
+    .descripcion {
+        display: block;
+    }
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .login-bar,
+    .search-bar {
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+
+/* Reglas para dispositivos desktop */
+@media (min-width: 769px) {
+    .descripcion {
+        display: block;
+    }
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .login-bar,
+    .search-bar {
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+
