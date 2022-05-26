@@ -1,57 +1,100 @@
 /* 
 Amarillo: #EAC926;
-Azul: #023f7f      #03264C;
+Azul: #004894      #03264C;
 Celeste: #1259c3;
 Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a;
 */
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #ebebeb;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
 }
+
+/*--------------------------------------------------------------
+    HEADER
+--------------------------------------------------------------*/
 
 header {
     background-color: #EAC926;
-    padding-bottom: 20px;
+    padding: 10px;
 }
 
-.nav-bar {
-    padding: 15px 15px 0px;
-}
-
-.nav-bar p {
-    text-align: center;
-}
-
-.login-bar,
-.search-bar {
+.main-search {
     display: none;
 }
 
-#logo {
-    width: 50%;
+.main-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
 }
 
-ul {
+#logo {
+    width: 45%;
+}
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 45%;
+    background-color: #fff;
+    border-radius: 6px;
+
+}
+.search-bar input {
+    padding: 5px;
+    font-size: 0.85em;
+}
+.search-bar i {
+    background: #fff;
+    color: #666;
+    padding: 5px;
+}
+
+.anuncio-main {
+    text-align: center;
+    margin: 1.5em 0px;
+}
+
+.main-search ul {
     padding: 0px;
-    line-height: 16px;
+    line-height: 1.5rem;
 }
 
 .burger-menu {
     text-align: center;
-    color: #023f7f;
+    color: #004894;
 }
 
+/*--------------------------------------------------------------
+    MAIN
+--------------------------------------------------------------*/
 main {
-    padding-top: 20px;
-    width: 90%;
+    width: 95%;
     margin: auto;
+}
+
+.titular {
+    margin: 30px 0 20px;
+}
+
+.contenedor-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .producto {
@@ -59,90 +102,140 @@ main {
     margin-bottom: 10px;
 }
 
-.info-producto{
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-}
-
-.fa-truck {
+main section article i {
+    display: block;
+    font-size: 16px;
     color: #39b54a;
-    border: 2px solid #39b54a;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #fff;
     border-radius: 50%;
-    padding: 10px;
-
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 article img {
     width: 100%;
 }
 
-.titular {
-    font-size: 24px;
+.info-producto {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
 }
 
 .precio {
     font-size: 18px;
+    flex-grow: .10;
 }
 
 .descuento {
     font-size: 14px;
     color: #39b54a;
+    flex-grow: .70;
 }
 
 .descripcion {
-    font-size: 16px;
     display: none;
+    color: #666;
+    padding: 0 15px 20px;
 }
 
+/*--------------------------------------------------------------
+    FOOTER
+--------------------------------------------------------------*/
 footer {
     padding: 30px;
     text-align: center;
-    line-height: 1.2em;
+    line-height: 1rem;
     color: #666;
 }
 
 .titulo-footer {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 700;
 }
 
 footer i {
-    color: #023f7f;
+    color: #004894;
     margin-bottom: 10px;
 }
 
-/* Reglas para dispositivos tablet & desktop */
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+    Reglas para dispositivos tablet 
+--------------------------------------------------------------*/
+
 @media (min-width: 481px) {
+    .main-header {
+        justify-content:space-between;
+    }
+    #logo {
+        width: 30%;
+    }
+    .search-bar {
+        width: 30%;
+    }
+    .anuncio-main {
+        font-size: 9px;
+    }
+    .main-search {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-search ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .main-search li {
+        margin: 4px;
+        font-size: 10px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+    .producto {
+        box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.3);
+    }
     .descripcion {
         display: block;
     }
-    .producto {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    .login-bar,
-    .search-bar {
-        display: block;
-    }
-    .burger-menu {
-        display: none;
+    article img {
+        width: 45vw
     }
 }
 
-/* Reglas para dispositivos desktop */
+/*--------------------------------------------------------------
+    Reglas para dispositivos desktop
+--------------------------------------------------------------*/
+
 @media (min-width: 769px) {
+    .main-search li {
+        margin: 10px;
+        font-size: 12px;
+    }
+    .anuncio-main {
+        font-size: 12px;
+    }
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100, 0.3);
+    }
     .descripcion {
         display: block;
     }
-    .producto {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    .login-bar,
-    .search-bar {
-        display: block;
-    }
-    .burger-menu {
-        display: none;
+    article img {
+        width: 22.5vw
     }
 }
 
