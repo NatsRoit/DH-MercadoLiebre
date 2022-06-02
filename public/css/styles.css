@@ -293,6 +293,9 @@ input::placeholder {
     color: #666;
     font-size: 14px;
 }
+input:required {
+    border: 1px solid #3483fb;
+  }
 
 input[type="file"] {
     border: 1px solid #3483fb;
